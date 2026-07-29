@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# NexoPOS · Frontend (web)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Interfaz de la maqueta de NexoPOS (React 19 + TypeScript + Vite). Consume el API
+de demostración por HTTP.
 
-Currently, two official plugins are available:
+## Comandos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+```bash
+npm run dev
+```
+
+```bash
+npm run build
+```
+
+## Configuración
+
+- `VITE_API_BASE_URL` — URL base del API. Por defecto `http://localhost:5257`.
+  Copie `.env.example` a `.env.local` para ajustarla.
+
+## Organización
+
+```
+src/
+├── api/         # Cliente HTTP centralizado y llamadas al API
+├── components/  # layout, dashboard, inventory, services, mobilekits, invoicing, reorder y UI reutilizable
+├── features/    # Páginas: dashboard, branches, inventory, services, mobilekits, invoicing, reorder
+├── hooks/       # useApiData, useMediaQuery
+├── router/      # Enrutador mínimo (History API)
+├── styles/      # Sistema de diseño (global.css)
+├── types/       # Tipos de las respuestas del API
+└── utils/       # Formato de moneda (CRC), fechas (CR), unidades, etiquetas y CSV
+```
+
+Consulte el `README.md` en la raíz del repositorio para el flujo completo
+(backend + frontend).

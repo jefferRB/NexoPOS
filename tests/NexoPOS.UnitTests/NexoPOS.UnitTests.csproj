@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\NexoPOS.Domain\NexoPOS.Domain.csproj" />
     <ProjectReference Include="..\..\src\NexoPOS.Application\NexoPOS.Application.csproj" />
+    <ProjectReference Include="..\..\src\NexoPOS.Infrastructure\NexoPOS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
