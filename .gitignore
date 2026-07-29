@@ -1,0 +1,31 @@
+﻿# Visual Studio
+.vs/
+**/.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# JetBrains
+.idea/
+*.sln.iml
+
+# React / Node
+**/node_modules/
+**/dist/
+**/.vite/
+**/coverage/
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Sistema operativo
+Thumbs.db
+.DS_Store

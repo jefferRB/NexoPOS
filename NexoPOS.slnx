@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/docs/" />
+  <Folder Name="/src/">
+    <Project Path="src/NexoPOS.API/NexoPOS.API.csproj" />
+    <Project Path="src/NexoPOS.Application/NexoPOS.Application.csproj" />
+    <Project Path="src/NexoPOS.Domain/NexoPOS.Domain.csproj" />
+    <Project Path="src/NexoPOS.Infrastructure/NexoPOS.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/NexoPOS.IntegrationTests/NexoPOS.IntegrationTests.csproj" />
+    <Project Path="tests/NexoPOS.UnitTests/NexoPOS.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/web/">
+    <Project Path="web/NexoPOS.Web/nexopos.web.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+  </Folder>
+</Solution>
